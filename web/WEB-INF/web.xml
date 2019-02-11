@@ -37,4 +37,21 @@
         <url-pattern>/Attribute1</url-pattern>
     </filter-mapping>
 
+    <servlet>
+        <servlet-name>log4jInit</servlet-name>
+        <servlet-class>main.Excercises_web_app.Log4jInit</servlet-class>
+
+        <init-param>
+            <param-name>log4j-init-file</param-name>
+            <param-value>WEB-INF/log4j.lcf</param-value>
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>log4jInit</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
 </web-app>

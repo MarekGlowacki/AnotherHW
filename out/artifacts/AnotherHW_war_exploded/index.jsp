@@ -1,4 +1,4 @@
-<%@ page import="Excercises_web_app.JEE.User" %><%--
+<%@ page import="main.Excercises_web_app.JEE.User" %><%--
   Created by IntelliJ IDEA.
   User: marek
   Date: 12.01.19

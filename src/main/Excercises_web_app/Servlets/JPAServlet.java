@@ -15,14 +15,14 @@ import java.io.IOException;
 @WebServlet(value = "/jpas")
 public class JPAServlet extends HttpServlet {
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/plain; charset=utf-8");
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("AnotherHW");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("NewPersistenceUnit");
         EntityManager em = emf.createEntityManager();
         User u = em.find(User.class, 1);
-        response.getWriter().println((u.getImie() + " " + u.getNazwisko()));
+        response.getWriter().println((u.getName() + " " + u.getSurname()));
         em.close();
         emf.close();
     }
-
 }

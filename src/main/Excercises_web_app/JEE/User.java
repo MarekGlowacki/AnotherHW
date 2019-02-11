@@ -8,33 +8,38 @@ import java.io.Serializable;
 @Entity
 @Table(name = "user")
 public class User implements Serializable {
+    private static final long serialVersionUID = -3299291830280417103L;
 
     @Id
     private int id;
-    private String imie;
-    private String nazwisko;
+    private String name;
+    private String surname;
 
-    public int getId(){
-        return this.id;
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 
-    public void setId(int id){
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getImie() {
-        return imie;
+    public String getName() {
+        return name;
     }
 
-    public void setImie(String imie) {
-        this.imie = imie;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getNazwisko() {
-        return nazwisko;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setNazwisko(String nazwisko) {
-        this.nazwisko = nazwisko;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 }

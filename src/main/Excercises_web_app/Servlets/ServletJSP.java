@@ -18,13 +18,13 @@ public class ServletJSP extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User u = new User();
         u.setId(1);
-        u.setImie("Marek");
-        u.setNazwisko("Marecky");
+        u.setName("Marek");
+        u.setSurname("Marecky");
         request.setAttribute("user", u);
         User drugi = new User();
         drugi.setId(2);
-        drugi.setImie("Zenon");
-        drugi.setNazwisko("Zenonowy");
+        drugi.setName("Zenon");
+        drugi.setSurname("Zenonowy");
         request.setAttribute("lista", Arrays.asList(u, drugi));
         request.setAttribute("kwota", 50.5);
         request.setAttribute("data", new Date());
