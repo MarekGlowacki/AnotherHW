@@ -6,7 +6,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "user")
+@Table(name = "Speakers")
 public class User implements Serializable {
     private static final long serialVersionUID = -3299291830280417103L;
 
@@ -14,6 +14,15 @@ public class User implements Serializable {
     private int id;
     private String name;
     private String surname;
+    private String company;
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
 
     public static long getSerialVersionUID() {
         return serialVersionUID;

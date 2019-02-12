@@ -15,6 +15,7 @@
   </head>
   <body>
     <p>Hey, Hi, hello</p>
+
     <fmt:formatNumber value="${kwota}" type="currency" minFractionDigits="2" maxFractionDigits="2"  />
     <fmt:formatDate value="${data}" type="both" dateStyle="short" timeStyle="long" />
   </body>

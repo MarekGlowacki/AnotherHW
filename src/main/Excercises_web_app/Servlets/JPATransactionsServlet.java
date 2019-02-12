@@ -11,7 +11,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
 @WebServlet(value = "/jpts")
 public class JPATransactionsServlet extends HttpServlet {
@@ -22,11 +24,13 @@ public class JPATransactionsServlet extends HttpServlet {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("NewPersistenceUnit");
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
+
         try {
             et.begin();
             User u = new User();
-            u.setName("Kris");
-            u.setSurname("Kristoferes");
+            u.setName("Kriss");
+            u.setSurname("Kristofer");
+            u.setCompany("hah");
             em.persist(u);
             et.commit();
             response.getWriter().println("Dodano użytkownika, ha ha!");

@@ -6,6 +6,7 @@
     <listener>
         <listener-class>main.Excercises_web_app.Listeners.ContextListner</listener-class>
     </listener>
+
     <login-config>
         <auth-method>BASIC</auth-method>
     </login-config>
@@ -37,6 +38,10 @@
         <url-pattern>/Attribute1</url-pattern>
     </filter-mapping>
 
+    <listener>
+        <listener-class>main.Excercises_web_app.JEE.DBConfig</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>log4jInit</servlet-name>
         <servlet-class>main.Excercises_web_app.Log4jInit</servlet-class>
@@ -53,5 +58,7 @@
         <servlet-name>log4jInit</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
+    
+
 
 </web-app>
