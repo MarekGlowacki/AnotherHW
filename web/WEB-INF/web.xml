@@ -3,9 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <listener>
-        <listener-class>main.Excercises_web_app.Listeners.ContextListner</listener-class>
-    </listener>
+
 
     <login-config>
         <auth-method>BASIC</auth-method>
@@ -29,14 +27,7 @@
             <transport-guarantee>NONE</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
-    <filter>
-        <filter-name>FiltrRegulowy</filter-name>
-        <filter-class>main.Excercises_web_app.Filters.FiltrRegulowy</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>FiltrRegulowy</filter-name>
-        <url-pattern>/Attribute1</url-pattern>
-    </filter-mapping>
+
 
     <listener>
         <listener-class>main.Excercises_web_app.JEE.DBConfig</listener-class>

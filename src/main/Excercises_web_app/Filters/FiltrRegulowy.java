@@ -1,11 +1,11 @@
 package main.Excercises_web_app.Filters;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
+import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
 
-@WebServlet(value = "/filtr")
+@WebFilter(value = "/hws")
 public class FiltrRegulowy implements Filter {
 
     @Override
