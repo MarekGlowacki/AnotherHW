@@ -4,12 +4,12 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "uzytkownik", schema = "AppJEE", catalog = "")
-public class UzytkownikEntity {
+@Table(name = "users", schema = "AppJEE", catalog = "")
+public class UsersEntity {
     private int id;
-    private String imie;
-    private String nazwisko;
-    private String przezwisko;
+    private String name;
+    private String surname;
+    private String nick;
 
     @Id
     @Column(name = "id")
@@ -22,48 +22,48 @@ public class UzytkownikEntity {
     }
 
     @Basic
-    @Column(name = "imie")
+    @Column(name = "name")
     public String getImie() {
-        return imie;
+        return name;
     }
 
     public void setImie(String imie) {
-        this.imie = imie;
+        this.name = name;
     }
 
     @Basic
-    @Column(name = "nazwisko")
+    @Column(name = "surname")
     public String getNazwisko() {
-        return nazwisko;
+        return surname;
     }
 
     public void setNazwisko(String nazwisko) {
-        this.nazwisko = nazwisko;
+        this.surname = surname;
     }
 
     @Basic
-    @Column(name = "przezwisko")
+    @Column(name = "nick")
     public String getPrzezwisko() {
-        return przezwisko;
+        return nick;
     }
 
     public void setPrzezwisko(String przezwisko) {
-        this.przezwisko = przezwisko;
+        this.nick = nick;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        UzytkownikEntity that = (UzytkownikEntity) o;
+        UsersEntity that = (UsersEntity) o;
         return id == that.id &&
-                Objects.equals(imie, that.imie) &&
-                Objects.equals(nazwisko, that.nazwisko) &&
-                Objects.equals(przezwisko, that.przezwisko);
+                Objects.equals(name, that.name) &&
+                Objects.equals(surname, that.surname) &&
+                Objects.equals(nick, that.nick);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, imie, nazwisko, przezwisko);
+        return Objects.hash(id, name, surname, nick);
     }
 }

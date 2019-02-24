@@ -17,8 +17,8 @@ public class ContextListner implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent arg0) {
-        System.out.println("Start aplikacji" + new Date());
-        ServletRegistration.Dynamic servlet = arg0.getServletContext().addServlet("Lista", "main.Excercises_web_app.Servlets.ListaUzytkownikowServlet");
-        servlet.addMapping("/lista");
+        System.out.println("Application start" + new Date());
+        ServletRegistration.Dynamic servlet = arg0.getServletContext().addServlet("List", "main.Excercises_web_app.Servlets.UsersListServlet");
+        servlet.addMapping("/list");
     }
 }

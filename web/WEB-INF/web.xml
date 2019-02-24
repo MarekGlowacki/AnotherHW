@@ -16,7 +16,7 @@
     </security-role>
     <security-constraint>
         <web-resource-collection>
-            <web-resource-name>RegulaBezpieczenstwa</web-resource-name>
+            <web-resource-name>SecurityRegule</web-resource-name>
             <url-pattern>*.jsp</url-pattern>
             <http-method>GET</http-method>
         </web-resource-collection>

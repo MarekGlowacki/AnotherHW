@@ -20,14 +20,13 @@ public class AsyncServlet extends HttpServlet {
                 asyncContext.getResponse().setContentType("text/plain; charset=utf-8");
                 try {
                     Thread.sleep(3000);
-                    asyncContext.getResponse().getWriter().println("WItaj, świecie bardziej lub mniej miły!");
+                    asyncContext.getResponse().getWriter().println("Hello, world!");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }).start();
-        response.setContentType("text/plain; charset=utf-8");
-        response.getWriter().println("WItaj, świecie bardziej lub mniej miły!");
+
     }
 
 }

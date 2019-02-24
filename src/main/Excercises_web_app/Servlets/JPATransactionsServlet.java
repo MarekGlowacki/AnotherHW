@@ -31,7 +31,7 @@ public class JPATransactionsServlet extends HttpServlet {
             u.setCompany("hah");
             em.persist(u);
             et.commit();
-            response.getWriter().println("Dodano użytkownika, ha ha!");
+            response.getWriter().println("User added, ha ha!");
         } catch (Exception e) {
 
             if (et.isActive()) {

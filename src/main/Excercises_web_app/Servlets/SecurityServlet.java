@@ -9,14 +9,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = {"/hws", "/hahaha", "/okejok"}, name = "Witaj swiecie")
+@WebServlet(urlPatterns = {"/hws", "/hahaha", "/okejok"}, name = "Hello, world")
 @ServletSecurity(httpMethodConstraints = {@HttpMethodConstraint(value = "GET", rolesAllowed = {"admin", "moderator"}, transportGuarantee = ServletSecurity.TransportGuarantee.NONE)})
 public class SecurityServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/plain; charset=utf-8");
-        response.getWriter().println("Witaj, świecie!");
+        response.getWriter().println("Hello, world!");
     }
 
 }

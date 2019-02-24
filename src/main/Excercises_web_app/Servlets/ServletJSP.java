@@ -18,16 +18,16 @@ public class ServletJSP extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User u = new User();
         u.setId(1);
-        u.setName("Marek");
+        u.setName("Mark");
         u.setSurname("Marecky");
         request.setAttribute("user", u);
         User drugi = new User();
         drugi.setId(2);
         drugi.setName("Zenon");
         drugi.setSurname("Zenonowy");
-        request.setAttribute("lista", Arrays.asList(u, drugi));
-        request.setAttribute("kwota", 50.5);
-        request.setAttribute("data", new Date());
+        request.setAttribute("list", Arrays.asList(u, drugi));
+        request.setAttribute("amount", 50.5);
+        request.setAttribute("date", new Date());
         RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
         rd.forward(request,response);
     }

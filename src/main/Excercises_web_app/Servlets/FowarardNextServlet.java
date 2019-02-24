@@ -13,7 +13,7 @@ public class FowarardNextServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/plain; charset=utf-8");
-        response.getWriter().println("Helloł");
+        response.getWriter().println("Hello");
 //        RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
 //        rd.forward(request, response);
         response.sendRedirect("/AnotherHW_war_exploded/index.jsp");

@@ -5,7 +5,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>main.Excercises_web_app.JEE.User</class>
         <class>Excercises_web_app.UserEntity</class>
-        <class>Excercises_web_app.UzytkownikEntity</class>
+        <class>Excercises_web_app.UsersEntity</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/Agenda_infoshare_2018"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>

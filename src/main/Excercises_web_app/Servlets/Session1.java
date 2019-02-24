@@ -15,16 +15,16 @@ public class Session1 extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html; charset=utf-8");
         PrintWriter pw = response.getWriter();
-        HttpSession sesja = request.getSession();
-        sesja.setMaxInactiveInterval(10);
-        Integer licznik = (Integer) sesja.getAttribute("licznik");
-        if (licznik == null) {
-            licznik = 1;
+        HttpSession session = request.getSession();
+        session.setMaxInactiveInterval(10);
+        Integer counter = (Integer) session.getAttribute("counter");
+        if (counter == null) {
+            counter = 1;
         } else {
-            licznik++;
+            counter++;
         }
-        sesja.setAttribute("licznik", licznik);
-        pw.println("Licznik: " + licznik);
+        session.setAttribute("counter", counter);
+        pw.println("counter: " + counter);
     }
 
 }

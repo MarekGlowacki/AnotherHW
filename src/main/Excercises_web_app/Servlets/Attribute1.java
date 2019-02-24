@@ -16,7 +16,7 @@ public class Attribute1 extends HttpServlet {
         response.setContentType("text/html; charset = utf-8");
         PrintWriter pw = response.getWriter();
         ServletContext kontekst = this.getServletContext();
-        pw.println("Filter działa");
+        pw.println("Filter works!");
 
 
     }

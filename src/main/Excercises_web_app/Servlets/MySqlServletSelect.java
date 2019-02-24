@@ -22,10 +22,10 @@ public class MySqlServletSelect extends HttpServlet {
                     "root", "coderslab");
 
             Statement stmt = connection.createStatement();
-            if (stmt.execute("SELECT * from uzytkownik")) {
-                ResultSet zbiorWynikow = stmt.getResultSet();
-                while (zbiorWynikow.next()) {
-                    response.getWriter().println(zbiorWynikow.getString("imie") + " " + zbiorWynikow.getString("nazwisko") + "\n");
+            if (stmt.execute("SELECT * from AppJEE.user")) {
+                ResultSet resultSet = stmt.getResultSet();
+                while (resultSet.next()) {
+                    response.getWriter().println(resultSet.getString("name") + " " + resultSet.getString("surname") + "\n");
                 }
             }
             connection.close();

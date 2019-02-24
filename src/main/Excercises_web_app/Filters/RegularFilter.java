@@ -6,7 +6,7 @@ import java.io.IOException;
 
 
 @WebFilter(value = "/hws")
-public class FiltrRegulowy implements Filter {
+public class RegularFilter implements Filter {
 
     @Override
     public void destroy(){
